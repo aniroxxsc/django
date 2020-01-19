@@ -6,12 +6,13 @@
 </head>
 <body>
     <h1>Wlcome to the our site. If you are not a existing user then register below<h1>
-        <form action='/registeration' method='get'>
+        <form action='/registration/' method='post'>
+         {% csrf_token %}
         <fieldset>
             <legend> Enter Login ID</legend>
-            <input type="text" name="registeration_id" id="registerid_pls" required/><br>
+            <input type="text" name="registration_id" id="registerid_pls" required/><br>
             <legend> Enter password</legend>
-            <input type="password" name="registeration_password" id="registerpw_pls" required><br>
+            <input type="password" name="registration_password" id="registerpw_pls" required><br>
             <button type='submit'> Register</button>
         </fieldset>
         </form>
