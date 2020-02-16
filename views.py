@@ -22,6 +22,10 @@ config = {
 def home(request):
     return render(request, 'login.html')
 
+def about(request):
+    return render(request, 'blog/about.html', {'title': 'About'})
+
+
     
 def registration(request):
     if request.method == 'POST':
